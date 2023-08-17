@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light justify-content-between px-5">
+  <a class="navbar-brand">MoviesLover</a>
+  <%= link_to 'Back to Lists', lists_path, class: "btn btn-primary" %>
+</nav>
+
+<div class="new-list-container">
+  <div class="title-new-list">
+    <h1>Create a List 🎥</h1>
+  </div>
+
+  <div class="form-new-list">
+    <%= render "form", list: @list %>
+  </div>
+</div>

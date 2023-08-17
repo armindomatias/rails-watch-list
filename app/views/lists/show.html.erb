@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-light justify-content-between px-5">
+  <a class="navbar-brand">MoviesLover</a>
+  <div>
+    <%= link_to 'Create Bookmark', new_list_bookmark_path(@list.id), class: "btn btn-success" %>
+    <%= link_to 'Back to Lists', lists_path, class: "btn btn-primary" %>
+  </div>
+</nav>
+
+<div class="banner">
+  <div class="banner-image banner-show" style="background-image: url(<%= @list.picture_url %>)">
+    <div class="banner-text banner-text-show">
+      <h1><%= @list.name %></h1>
+      <p>where you can find your favorite ones</p>
+    </div>
+  </div>
+</div>
+
+<div class="lists-container">
+
+  <div class="lists-grid">
+    <% @movies.each do |movie| %>
+    <% bookmark = Bookmark.find_by(movie: movie) %>
+      <div class="card-movie card">
+        <div style="background-image: <%= movie.poster_url %>"></div>
+        <div class="main-info-movie">
+          <h4><%= movie.title %></h4>
+          <p><%= movie.rating %></p>
+        </div>
+        <div class="movie-overview">
+          <p><%= movie.overview %></p>
+        </div>
+        <div class="footer-movie">
+          <p>"<%= bookmark.comment %>"</p>
+          <%= link_to 'Delete', bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

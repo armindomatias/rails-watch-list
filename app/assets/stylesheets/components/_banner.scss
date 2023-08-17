@@ -1,0 +1,33 @@
+.banner {
+  margin-bottom: 50px;
+}
+
+.banner-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-show {
+  height: 400px;
+}
+
+.banner-text-show {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 8px 5px 5px red;
+}
