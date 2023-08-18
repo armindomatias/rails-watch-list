@@ -1,0 +1,12 @@
+.card-movie {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: -1px -1px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 15px;
+
+}
+
+.footer-movie {
+  display: flex;
+  justify-content: space-between;
+}

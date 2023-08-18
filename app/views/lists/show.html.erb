@@ -20,22 +20,32 @@
   <div class="lists-grid">
     <% @movies.each do |movie| %>
     <% bookmark = Bookmark.find_by(movie: movie) %>
-      <div class="card-movie card">
+      <div class="card-movie">
         <div style="background-image: <%= movie.poster_url %>"></div>
         <div class="main-info-movie">
           <h4><%= movie.title %></h4>
-          <p><%= movie.rating %></p>
+          <p><%= movie.rating %> ⭐️</p>
         </div>
+        <hr>
         <div class="movie-overview">
           <p><%= movie.overview %></p>
         </div>
+        <hr>
         <div class="footer-movie">
           <p>"<%= bookmark.comment %>"</p>
-          <%= link_to 'Delete', bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
-          <i class="fa-solid fa-trash"></i>
+          <%= link_to bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
         </div>
       </div>
     <% end %>
   </div>
 
+</div>
+
+<div class="list-reviews">
+  <div class="show-reviews">
+  </div>
+  <div class="upload-a-review">
+  </div>
 </div>
