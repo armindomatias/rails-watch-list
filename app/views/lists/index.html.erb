@@ -1,16 +1,6 @@
-<nav class="navbar navbar-light bg-light justify-content-between px-5">
-  <a class="navbar-brand">MoviesLover</a>
-  <%= link_to 'Create a List', new_list_path, class: "btn btn-primary" %>
-</nav>
+<%= render "reusable_html/navbar" %>
 
-<div class="banner">
-  <div class="banner-image" style="background-image: url('https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773')">
-    <div class="banner-text">
-      <h1>WATCH LIST</h1>
-      <p>where you can find your favorite ones</p>
-    </div>
-  </div>
-</div>
+<%= render "reusable_html/banner" %>
 
 <div class="lists-container">
 
@@ -27,15 +17,4 @@
     <% end %>
   </div>
 
-</div>
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made by idk 😅
-  </div>
 </div>

@@ -1,7 +1,19 @@
-<nav class="navbar navbar-light bg-light justify-content-between">
-  <a class="navbar-brand">Navbar</a>
-  <form class="form-inline d-flex">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
+<% if controller_name == 'lists' && action_name == 'index' %>
+  <nav class="navbar navbar-light bg-light justify-content-between px-5">
+    <%= link_to 'MoviesLover', lists_path, class: "navbar-brand" %>
+    <%= link_to 'Create a List', new_list_path, class: "btn btn-primary" %>
+  </nav>
+<% elsif controller_name == 'lists' && action_name == 'show' %>
+  <nav class="navbar navbar-light bg-light justify-content-between px-5">
+    <%= link_to 'MoviesLover', lists_path, class: "navbar-brand" %>
+    <div>
+      <%= link_to 'Create Bookmark', new_list_bookmark_path(list.id), class: "btn btn-success" %>
+      <%= link_to 'Back to Lists', lists_path, class: "btn btn-primary" %>
+    </div>
+  </nav>
+<% elsif controller_name == 'bookmarks' && action_name == 'new' %>
+  <nav class="navbar navbar-light bg-light justify-content-between px-5">
+    <%= link_to 'MoviesLover', lists_path, class: "navbar-brand" %>
+    <%= link_to list.name, list_path(list.id), class: "btn btn-primary" %>
+  </nav>
+<% end %>

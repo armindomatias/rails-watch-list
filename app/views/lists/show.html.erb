@@ -1,19 +1,6 @@
-<nav class="navbar navbar-light bg-light justify-content-between px-5">
-  <a class="navbar-brand">MoviesLover</a>
-  <div>
-    <%= link_to 'Create Bookmark', new_list_bookmark_path(@list.id), class: "btn btn-success" %>
-    <%= link_to 'Back to Lists', lists_path, class: "btn btn-primary" %>
-  </div>
-</nav>
+<%= render "reusable_html/navbar", list: @list %>
 
-<div class="banner">
-  <div class="banner-image banner-show" style="background-image: url(<%= @list.picture_url %>)">
-    <div class="banner-text banner-text-show">
-      <h1><%= @list.name %></h1>
-      <p>where you can find your favorite ones</p>
-    </div>
-  </div>
-</div>
+<%= render "reusable_html/banner", list: @list %>
 
 <div class="lists-container">
 

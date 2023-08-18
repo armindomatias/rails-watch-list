@@ -1,7 +1,4 @@
-<nav class="navbar navbar-light bg-light justify-content-between px-5">
-  <a class="navbar-brand">MoviesLover</a>
-  <%= link_to @list.name, list_path(@list.id), class: "btn btn-primary" %>
-</nav>
+<%= render "reusable_html/navbar", list: @list %>
 
 <div class="new-list-container">
   <div class="title-new-list">

@@ -1,0 +1,20 @@
+<% if controller_name == 'lists' && action_name == 'index' %>
+  <div class="banner">
+    <div class="banner-image" style="background-image: url('https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773')">
+      <div class="banner-text">
+        <h1>WATCH LIST</h1>
+        <p>where you can find your favorite ones</p>
+      </div>
+    </div>
+  </div>
+
+<% else %>
+  <div class="banner">
+    <div class="banner-image banner-show" style="background-image: url(<%= list.picture_url %>)">
+      <div class="banner-text banner-text-show">
+        <h1><%= list.name %></h1>
+        <p>where you can find your favorite ones</p>
+      </div>
+    </div>
+  </div>
+<% end %>
