@@ -8,7 +8,9 @@
     <% @movies.each do |movie| %>
     <% bookmark = Bookmark.find_by(movie: movie) %>
       <div class="card-movie">
-        <div style="background-image: <%= movie.poster_url %>"></div>
+        <div class="poster-movie">
+          <%= image_tag "https://image.tmdb.org/t/p/w400#{movie.poster_url}", alt: "#{movie.title} poster" %>
+        </div>
         <div class="main-info-movie">
           <h4><%= movie.title %></h4>
           <p><%= movie.rating %> ⭐️</p>
