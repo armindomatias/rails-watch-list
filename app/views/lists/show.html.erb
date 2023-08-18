@@ -33,8 +33,17 @@
 </div>
 
 <div class="list-reviews">
-  <div class="show-reviews">
-  </div>
   <div class="upload-a-review">
+    <%= render "form_review" %>
+  </div>
+  <div class="show-reviews">
+    <h4>Reviews</h4>
+    <hr>
+    <% @reviews.each do |review| %>
+      <div class="d-flex">
+        <h4><%= review.rating %> ⭐️ | </h4>
+        <p><%= review.content %></p>
+      </div>
+    <% end %>
   </div>
 </div>

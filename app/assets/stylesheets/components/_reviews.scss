@@ -1,0 +1,24 @@
+// Show reviews
+
+.list-reviews {
+  display: flex;
+  margin: 30px 200px;
+}
+
+.show-reviews {
+  width: 50%;
+}
+
+// Reviews Forms
+
+.upload-a-review, .show-reviews {
+  background-color: rgb(229, 226, 226);
+  width: 50%;
+  border: solid;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.upload-a-review {
+  margin-right: 30px;
+}
