@@ -10,7 +10,7 @@
 
 <% else %>
   <div class="banner">
-    <div class="banner-image banner-show" style="background-image: url(<%= list.picture_url %>)">
+    <div class="banner-image banner-show" style="background-image: url('<%= cl_image_path list.photo.key, crop: :fill %>')">
       <div class="banner-text banner-text-show">
         <h1><%= list.name %></h1>
         <p>where you can find your favorite ones</p>
